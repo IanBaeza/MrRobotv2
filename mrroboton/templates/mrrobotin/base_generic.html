@@ -1,0 +1,64 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="ES">
+<head>
+    <title>MrRobot</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> <!--como importo esto? -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/estilos.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>     <!--como importo esto -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>  <!--como importo esto -->
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/caracter.js' %}"></script>
+    <script src="{% static 'js/registro.js' %}"></script>
+    <script src="{% static 'js/confirmar.js' %}"></script>
+    <script src="{% static 'js/clave.js' %}"></script>
+</head>
+
+<!-- <body background="{% static 'images/nebula.jpg' %}">  -->
+<!-- <body {background: url(ruta_de_tu_imagen);}> -->
+<body background-image="{% static 'images/nebuloide.jpg' %}">
+
+<header>
+    <div class="header">
+        <div class="row">      
+            <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7"><img src="{% static 'images/mrrobottitle.png'%}" href="{% url 'index' %}" alt="Mr Robot" style="width:100%;"></div>
+            <div class="col-12 col-sm-4 col-md-4 col-lg-1 col-xl-1"><a href="{% url 'inicio' %}"><h3 class="text-center" style="color: azure;">Inicio</h3></a></div>
+            <div class="col-12 col-sm-4 col-md-4 col-lg-1 col-xl-1"><a href="{% url 'galeria' %}"><h3 class="text-center" style="color: azure;">Galeria</h3></a></div>
+            <div class="col-12 col-sm-4 col-md-4 col-lg-1 col-xl-1"><a href="{% url 'registro' %}"><h3 class="text-center" style="color: azure;">Registro</h3></a></div>
+            {% if user.is_authenticated %}
+            <div class="col-12 col-sm-6 col-md-6 col-lg-1 col-xl-1"><a href="{% url 'pc' %}"><h3 class="text-center" style="color: azure;">Armar PC</h3></a></div>
+            {% endif %}
+            {% if user.is_authenticated %}
+            <div class="col-12 col-sm-6 col-md-6 col-lg-1 col-xl-1"><a href="/logout"><h3 class="text-center" style="color: azure;">Salir</h3></a></div>
+            {% endif %}
+        </div>
+    </div>
+</header>
+{% block content %}
+{% endblock %}
+<footer>
+    <div class="container" >
+        <div class="row">
+            <div class="col-xs-4">
+                <h5 class="text-left">Contacto</h5>
+                <img src="{% static 'images/facebookicon.jpg' %}" alt="Facebook" width="30" height="30"  >
+                <img src="{% static 'images/twitericon.jpg' %}"  alt="Twitter" width="30" height="30" > 
+                <img src="{% static 'images/instagramicon.jpg' %}"  alt="Instagram" width="30" height="30" >
+                <img src="{% static 'images/giticon.jpg' %}" alt="GitHub" width="30" height="30" >
+            </div>
+            <div class="col-xs-4"> 
+                <h5 class="text-center">Copyright © 2019-2019 Mr.Robot. Todos los derechos reservados.</h5>
+            </div>
+            <div class="col-xs-4">
+                <h5 class="text-right">Ubicación</h5>
+                <h6 class="text-right">Esq Blanca 501, Maipú, Región Metropolitana</h6>
+            </div>
+        </div>
+    </div>
+</footer>   
+</body>
+</html>

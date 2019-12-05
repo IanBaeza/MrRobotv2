@@ -1,0 +1,43 @@
+{% extends 'mrrobotin/base_generic.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container" >  
+    <div class="row col-sm-12">
+        <h2 class="text-center" style="color: rgb(255, 255, 255);">Galeria de Productos</h2>
+    </div> <br>
+    <div class="img">
+        <div class="row">
+            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                <img src="{% static 'images/pc1galeria.jpg' %}" class="img-responsive" alt="COMPUTADOR GAMER SATURN RGB">
+                <h3 class="text-center" style="color: rgb(241, 239, 239);">COMPUTADOR GAMER SATURN RGB</h3>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                <img src="{% static 'images/pc2galeria.jpg' %}" class="img-responsive" alt="COMPUTADOR GAMER ONE">
+                <h3 class="text-center" style="color: rgb(241, 239, 239);">COMPUTADOR GAMER ONE</h3>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                <img src="{% static 'images/pc3galeria.jpg' %}" class="img-responsive" alt="COMPUTADOR GAMER EPIC LIGHT">
+                <h3 class="text-center" style="color: rgb(241, 239, 239);">COMPUTADOR GAMER EPIC LIGHT</h3>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                <img src="{% static 'images/pc4galeria.jpg' %}" class="img-responsive" alt="COMPUTADOR GAMER MOBA">
+                <h3 class="text-center" style="color: rgb(241, 239, 239);">COMPUTADOR GAMER MOBA</h3>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                <img src="{% static 'images/pc5galeria.jpg' %}" class="img-responsive" alt="COMPUTADOR GAMER CAM RGB">
+                <h3 class="text-center" style="color: rgb(241, 239, 239);">COMPUTADOR GAMER CAM RGB</h3>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                <img src="{% static 'images/pc6galeria.jpg' %}" class="img-responsive" alt="COMPUTADOR GAMER EXPERT">
+                <h3 class="text-center" style="color: rgb(241, 239, 239);">COMPUTADOR GAMER EXPERT</h3>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'mrrobotin/base_generic.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+    <hr>
+    <h2 style="color: rgb(255, 255, 255);">Registro de Usuario</h2>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+        <button type="submit">Registrar</button>
+        </form>
+    <hr>
+
+    <h6>Ya estás Registrado? para Iniciar Sesión pincha el siguiente enlace <h6><a href="/login">Iniciar sesión</a>
+</div>
+{% endblock %}

@@ -1,0 +1,79 @@
+{% extends 'mrrobotin/base_generic.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container"> 
+  <h2 style="color: rgb(241, 239, 239);">Arma Tu PC</h2>
+  <div class="row col-sm-2">
+      <form action="pc.html" method="POST" name="datos" onsubmit="">
+        <div class="form-group">
+          <label for="radio" class="letras" style="color: rgb(241, 239, 239);">Gabinete : </label>
+            <select name="gabinete" id="selector">
+              <option value="Deepcool® Gabinete ATX Tesseract SW - Blue">Deepcool® Gabinete ATX Tesseract SW - Blue</option>
+              <option value="Gamdias® Gabinete ATX Argus E1 RGB">Gamdias® Gabinete ATX Argus E1 RGB</option>
+              <option value="Gamdias® Gabinete ATX Talos M1">Gamdias® Gabinete ATX Talos M1</option>
+              <option value="Asus® Gabinete EATX ROG Strix Helios">Asus® Gabinete EATX ROG Strix Helios</option>
+            </select>
+        </div>
+        <div class="form-group">
+          <label for="radio" class="letras" style="color: rgb(241, 239, 239);">Fuente : </label>
+            <select name="fuente" id="selector">
+              <option value="Gamdias® Fuente de Poder 550W 80Plus Bronce">Gamdias® Fuente de Poder 550W 80Plus Bronce</option>
+              <option value="Deepcool® Fuente Poder 600W 80+ Bronze DA600">Deepcool® Fuente Poder 600W 80+ Bronze DA600</option>
+              <option value="Seasonic® Fuente de poder 520W 80+ Bronze">Seasonic® Fuente de poder 520W 80+ Bronze</option>
+              <option value="Deepcool® Fuente de Poder 750W 80Plus Gold DQ750">Deepcool® Fuente de Poder 750W 80Plus Gold DQ750</option>
+            </select>
+        </div>
+        <div class="form-group">
+          <label for="radio" class="letras" style="color: rgb(241, 239, 239);">Placa Madre : </label>
+            <select name="placa" id="selector">
+              <option value="Asus® M/B Intel H110M-E/M.2 (1151)">Asus® M/B Intel H110M-E/M.2 (1151)</option>
+              <option value="MSI® M/B Intel B250M Gaming PRO VH">MSI® M/B Intel B250M Gaming PRO VH</option>
+              <option value="Gigabyte® M/B Intel B360 Aorus Gaming 3 WiFi (1151-v2)">Gigabyte® M/B Intel B360 Aorus Gaming 3 WiFi (1151-v2)</option>
+              <option value="Asus® M/B Intel ROG Strix Z390-E Gaming (1151-v2)">Asus® M/B Intel ROG Strix Z390-E Gaming (1151-v2)</option>
+            </select>
+        </div>
+        <div class="form-group">
+          <label for="radio" class="letras" style="color: rgb(241, 239, 239);">Memoria RAM : </label>
+            <select name="ram" id="selector">
+              <option value="Kingston® DDR4 4GB 2400MHz HyperX FURY (Black)">Kingston® DDR4 4GB 2400MHz HyperX FURY (Black)</option>
+              <option value="G.Skill® DDR4 8GB 2800MHz Ripjaws V Series">G.Skill® DDR4 8GB 2800MHz Ripjaws V Series</option>
+              <option value="Ballistix® DDR4 8GB 3000MHz Ballistix Tactical Tracer RGB">Ballistix® DDR4 8GB 3000MHz Ballistix Tactical Tracer RGB</option>
+              <option value="XPG® DDR4 16GB 3000MHz Spectrix D41 RGB (Red)">XPG® DDR4 16GB 3000MHz Spectrix D41 RGB (Red)</option>
+            </select>
+        </div>
+        <div class="form-group">
+          <label for="radio" class="letras" style="color: rgb(241, 239, 239);">Procesador : </label>
+            <select name="procesador" id="selector">
+              <option value="Intel® CPU Core i3-9100F 4.20GHz 6MB (1151-v2)">Intel® CPU Core i3-9100F 4.20GHz 6MB (1151-v2)</option>
+              <option value="Intel® CPU Core i5-9400F 4.10 GHz 9MB (1151-v2)">Intel® CPU Core i5-9400F 4.10 GHz 9MB (1151-v2)</option>
+              <option value="Intel® CPU Core i7-9700 3.0GHz 12MB">Intel® CPU Core i7-9700 3.0GHz 12MB</option>
+              <option value="Intel® CPU Core i9-9900K 3.6GHz (Turbo 5.0GHz) (1151-v2)">Intel® CPU Core i9-9900K 3.6GHz (Turbo 5.0GHz) (1151-v2)</option>
+            </select>
+        </div>
+        <div class="form-group">
+          <label for="radio" class="letras" style="color: rgb(241, 239, 239);">Tarjeta de Video : </label>
+            <select name="tarjeta" id="selector">
+              <option value="Asus® Video NVIDIA GeForce GT1030 2G CSM GDDR5">Asus® Video NVIDIA GeForce GT1030 2G CSM GDDR5</option>
+              <option value="Gigabyte® Video Nvidia Geforce GTX1650 Gaming OC 4GB">Gigabyte® Video Nvidia Geforce GTX1650 Gaming OC 4GB</option>
+              <option value="Asus® Video NVIDIA Gaming GeForce GTX1660Ti O6G ROG Strix">Asus® Video NVIDIA Gaming GeForce GTX1660Ti O6G ROG Strix</option>
+              <option value="MSI® Video NVIDIA GeForce RTX2080 8GB Ventus OC">MSI® Video NVIDIA GeForce RTX2080 8GB Ventus OC</option>
+            </select>
+        </div>
+        <div class="form-group">
+          <label for="radio" class="letras" style="color: rgb(241, 239, 239);">Almacenamiento : </label>
+            <select name="almacenamiento" id="selector">
+              <option value="WD® Disco Duro PC 2TB 64MB Blue">WD® Disco Duro PC 2TB 64MB Blue</option>
+              <option value="Seagate® Disco Duro 3TB Sata3 7200 rpm 64mb Barracuda">Seagate® Disco Duro 3TB Sata3 7200 rpm 64mb Barracuda</option>
+              <option value="Toshiba® Disco Duro 4TB Sata3 7200 rpm 128MB X300">Toshiba® Disco Duro 4TB Sata3 7200 rpm 128MB X300</option>
+              <option value="Toshiba® Disco Duro NAS 8TB N300">Toshiba® Disco Duro NAS 8TB N300</option>
+            </select>
+        </div>
+
+
+        <button type="submit" class="btn btn-primary" value="Enviar" onclick="confirmar()">Enviar</button>
+      </form>
+  </div>
+</div>
+
+{% endblock %}
